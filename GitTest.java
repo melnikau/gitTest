@@ -9,6 +9,7 @@ public class GitTest {
         hashMap.put(8, "Восемь");
         hashMap.put(9, "Девять");
         hashMap.put(10, "Десять");
+        hashMap.put(11, "Одиннадцать");
     }
 }
 
