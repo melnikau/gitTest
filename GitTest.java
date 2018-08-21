@@ -16,7 +16,9 @@ public class GitTest {
 
         Set<Integer> keySet = hashMap.keySet();
         for (Integer value : keySet) {
-            
+            if (hashMap.get(value).contains("цать")) {
+
+            }
         }
     }
 }
