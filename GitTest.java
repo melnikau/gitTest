@@ -15,6 +15,9 @@ public class GitTest {
         hashMap.put(13, "Тринадцать");
 
         Set<Integer> keySet = hashMap.keySet();
+        for (Integer value : keySet) {
+            
+        }
     }
 }
 
