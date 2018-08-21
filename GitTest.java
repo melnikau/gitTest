@@ -1,6 +1,7 @@
 package gitTest;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class GitTest {
     public static void main(String[] args) {
@@ -12,6 +13,8 @@ public class GitTest {
         hashMap.put(11, "Одиннадцать");
         hashMap.put(12, "Двенадцать");
         hashMap.put(13, "Тринадцать");
+
+        Set<Integer> keySet = hashMap.keySet();
     }
 }
 
