@@ -1,0 +1,41 @@
+SELECT OrderID, ProductID, MAX(Quantity) AS maxQuantity 
+FROM OrderDetails
+WHERE ProductID BETWEEN 33 AND 60; 
+
+
+SELECT OrderID, EmployeeID, MIN(OrderDate) AS minOrderDate
+FROM Orders
+WHERE EmployeeID IN (1, 3); 
+
+
+SELECT OrderID, COUNT(OrderID)
+FROM OrderDetails
+WHERE OrderID=10255;
+
+
+SELECT OrderID, SUM(Quantity)
+FROM OrderDetails
+WHERE OrderID BETWEEN 10248 AND 10253
+GROUP BY OrderID
+HAVING COUNT(OrderID)
+
+
+SELECT CategoryID, AVG(Price)
+FROM Products
+WHERE CategoryID BETWEEN 1 AND 4
+GROUP BY CategoryID
+HAVING COUNT(CategoryID)
+
+
+SELECT Customers.CustomerID, Customers.CustomerName, Customers.City, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID;
+Здесь Orders присоединится к Customers, и будут видны даже те заказчики, которые ничего не заказывали
+
+
+SELECT Customers.CustomerID, Customers.CustomerName, Customers.City, Orders.OrderID
+FROM Customers
+INNER JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID;
+Здесь мы увидим только тех заказчиков, у которых есть какие-то заказы
